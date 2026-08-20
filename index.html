@@ -83,9 +83,9 @@ footer .monoimg{width:clamp(104px,26vw,132px);margin:0 auto 2px}
 @keyframes eq{0%,100%{height:6px}50%{height:16px}}
 
 /* ===== HERO ===== */
-#hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:70px 16px 120px;background:radial-gradient(ellipse at 50% 30%,var(--ivory) 0%,var(--cream) 65%)}
+#hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:70px 16px 120px;background:radial-gradient(ellipse at 50% 30%,rgba(255,253,247,.35),rgba(250,244,232,0) 62%)}
 .mandala-bg{position:absolute;top:-22vmin;left:50%;transform:translateX(-50%);width:110vmin;opacity:.14;animation:spin 90s linear infinite;pointer-events:none}
-.hero-photo-bg{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(540px,94vw);aspect-ratio:422/589;background:var(--couplemain) center/contain no-repeat;opacity:.13;z-index:1;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at 50% 46%,#000 52%,transparent 82%);mask-image:radial-gradient(ellipse at 50% 46%,#000 52%,transparent 82%)}
+.site-couple-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--couplemain) center 46%/auto min(80vh,600px) no-repeat;opacity:.10;-webkit-mask-image:radial-gradient(ellipse 62% 62% at 50% 45%,#000 46%,transparent 82%);mask-image:radial-gradient(ellipse 62% 62% at 50% 45%,#000 46%,transparent 82%)}
 @keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
 .gopuram{position:absolute;bottom:0;left:0;width:100%;opacity:.16;pointer-events:none}
 .hero-inner{position:relative;z-index:3}
@@ -131,7 +131,7 @@ footer .monoimg{width:clamp(104px,26vw,132px);margin:0 auto 2px}
 @keyframes waveHand{0%,70%,100%{transform:rotate(0)}78%{transform:rotate(-16deg)}86%{transform:rotate(6deg)}92%{transform:rotate(-10deg)}}
 
 /* ===== COUNTDOWN ===== */
-#countdown-sec{background:linear-gradient(180deg,var(--cream),#F3E9D5 60%,var(--cream));border-top:1px solid rgba(184,115,51,.18);border-bottom:1px solid rgba(184,115,51,.18)}
+#countdown-sec{background:linear-gradient(180deg,rgba(250,244,232,.55),rgba(243,233,213,.55) 60%,rgba(250,244,232,.55));border-top:1px solid rgba(184,115,51,.18);border-bottom:1px solid rgba(184,115,51,.18)}
 .count-wrap{display:flex;justify-content:center;gap:clamp(10px,3vw,28px);flex-wrap:wrap;margin:34px 0 10px}
 .count-cell{background:var(--ivory);border:1.5px solid rgba(184,115,51,.35);border-radius:14px;min-width:92px;padding:18px 10px;text-align:center;box-shadow:0 8px 26px rgba(140,90,43,.12);position:relative;overflow:hidden}
 .count-cell::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(212,169,78,.22) 50%,transparent 70%);transform:translateX(-100%);animation:shine 4s ease-in-out infinite}
@@ -330,7 +330,7 @@ footer .monoimg{width:clamp(104px,26vw,132px);margin:0 auto 2px}
 @media(max-width:640px){.wish-card{width:100%;max-width:320px}}
 
 /* ===== FOOTER ===== */
-footer{background:linear-gradient(180deg,var(--cream),#EFE3CB);text-align:center;padding:56px 20px 90px;position:relative;overflow:hidden}
+footer{background:linear-gradient(180deg,rgba(250,244,232,.55),rgba(239,227,203,.7));text-align:center;padding:56px 20px 90px;position:relative;overflow:hidden}
 footer .mono{font-family:var(--name);font-weight:700;letter-spacing:.1em;font-size:2.6rem;color:var(--maroon)}
 footer .tag{font-style:italic;color:var(--bronze);letter-spacing:.1em;font-size:1.1rem;margin-top:2px}
 footer .thanks-ta{font-family:var(--tamil);font-weight:600;color:var(--maroon);font-size:1.15rem;letter-spacing:.14em;margin-top:22px}
@@ -358,8 +358,8 @@ footer .thanks-dt{font-family:var(--num);color:var(--copper);font-size:1rem;lett
 </button>
 
 <!-- ══════════ HERO ══════════ -->
+<div class="site-couple-bg" aria-hidden="true"></div>
 <section id="hero">
-  <div class="hero-photo-bg" aria-hidden="true"></div>
   <svg class="mandala-bg" viewBox="0 0 400 400" fill="none" stroke="#B87333">
     <g stroke-width="1">
       <circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="160"/><circle cx="200" cy="200" r="120"/><circle cx="200" cy="200" r="80"/>
